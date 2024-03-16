@@ -7,7 +7,7 @@ We provide a framework to generate Process-aware Bayesian Network structures fro
 For that, the activity information in the trace data is annotated with the respective place information. For the generated structure, we preprocess the event log data accordingly to ensure that parameter learning for the designed approach is possible. Eventually, unknown trace information can be predicted via Bayesian Inference by querying the Process-aware Bayesian Network with a given set of evidence about known prefixes, suffixes or evidence about desired outcomes of traces.
 
 ## Usage
-- Load a desired event log data set. We provide an exemplary synthetic event log (`data/sim_event_log.csv`).
+- Load a desired event log data set. We provide the analyzed datasets in the `data/` folder (Helpdesk, BPI2012 - Full, BPI2012 - Sub and BPI2012 - WC).
 - Adjust the predefined model setup and constants if necessary.
 - Generate the Process-aware network structure with the provided set of functions.
 - Preprocess the data with the provided set of functions.
