@@ -14,4 +14,4 @@ For that, the activity information in the trace data is annotated with the respe
 - Query the Process-aware Bayesian Network with the framework provided by the `bnlearn` package we rely on in our implementations. We provide exemplary queries that can be used and adapted by practitioners.
 
 ## Scripts
-We provide two scripts for execution. One for Next Activity and Remaining Trace Prediction (`evaluation_suffix.R`) and one for using the Process-aware Bayesian Network as a Process Query System (`evaluation_query.R`).
+We provide multiple scripts for execution. The `2x_model_training_x.R` files are for model training for each application (Next Activity and Remaining Trace Prediction or the Process Query System). Files (`3x_evaluation_x.R`) are for evaluating the two applications. `10_preliminaries.R` loads the required extensions as well as the `custom_BN_functions.R`.
