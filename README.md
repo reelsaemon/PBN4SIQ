@@ -1,6 +1,6 @@
-# Process-aware Bayesian Networks for Sequential Inference and Querying on Event Logs
+# Process-Aware Bayesian Networks for Sequential Event Log Queries
 
-Implementation of Process-aware Bayesian Networks for Sequential Inference and Querying on Event Logs
+Implementation of Process-Aware Bayesian Networks for Sequential Event Log Queries
 
 ## Framework
 
