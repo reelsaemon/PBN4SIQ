@@ -438,6 +438,13 @@ attribute_padder <- function(vec, pad) {
   return(padded_vector)
 }
 
+# introducing NA values in a lower-staircase pattern with respect to place information
+lower_staircase <- function(val_col, order_col, tier_info) {
+  
+  staircase_values <- if_else(order_col < tier_info, NA, val_col)
+  return(staircase_values)
+}
+
 # evaluation --------------------------------------------------------------
 
 # wrapper for DamerauLevenshtein()-function from comparator-package
@@ -463,9 +470,3 @@ manual_ndls <- function(actual_trace, predicted_trace) {
   }
 }
 
-# introducing NA values in a lower-staircase pattern with respect to place information
-lower_staircase <- function(val_col, order_col, tier_info) {
-  
-  staircase_values <- if_else(order_col < tier_info, NA, val_col)
-  return(staircase_values)
-}
