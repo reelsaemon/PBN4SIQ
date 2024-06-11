@@ -142,7 +142,7 @@ nap_accuracy_only_trace_length_non_na <- round(activity_prediction_frame_trace_l
 rtp_similarity_only_trace_length_non_na <- round(mean(na.omit(similarities_only_trace_length_non_NA)), digits=5)
 na_share <- round(activity_prediction_frame_trace_length_only[, sum(is.na(pred_next_activity))/.N], digits=5)
 
-dir.create(file.path("export/metrics/"), showWarnings = FALSE)
+dir.create(file.path("export/metrics/"), showWarnings=FALSE, recursive=TRUE)
 sink(paste0("export/metrics/metrics_",
             dataset, "_",
             "tr_", round(training_size*100), "_",
