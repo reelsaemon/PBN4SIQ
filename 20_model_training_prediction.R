@@ -3,7 +3,7 @@
 #######################################################################################
 
 ################################
-# Model Training (Predictions) #
+# Model Training (NAP and RTP) #
 ################################
 
 # Model parameters --------------------------------------------------------
@@ -27,6 +27,10 @@ dataset_values <- c(
   "BPI2012W"
   ,
   "BPI2012Sub"
+  ,
+  "Permit"
+  ,
+  "RoadFines"
 )
 random_seed_values <- c(27626)
 
@@ -116,6 +120,30 @@ if(dataset=="helpdesk") {
     dataset_specific_additional_attributes_discrete <- c()
     
     # event_log[, resource_id:=as.factor(resource_id)]
+  }
+  
+} else if(dataset=="Permit") {
+  
+  event_log <- as.data.table(read.csv("data/BPI_2020_permit_log.csv", sep=","))
+  id_colname <- "CASE_concept_name"
+  activity_colname <- "activity_id"
+  timestamp_colname <- "timestamp"
+  if(other_additional_attributes==TRUE) {
+    
+    dataset_specific_additional_attributes <- c()
+    dataset_specific_additional_attributes_discrete <- c()
+  }
+  
+} else if(dataset=="RoadFines") {
+  
+  event_log <- as.data.table(read.csv("data/road_fines.csv", sep=" "))
+  id_colname <- "CASE_concept_name"
+  activity_colname <- "activity_id"
+  timestamp_colname <- "timestamp"
+  if(other_additional_attributes==TRUE) {
+    
+    dataset_specific_additional_attributes <- c()
+    dataset_specific_additional_attributes_discrete <- c()
   }
   
 }
